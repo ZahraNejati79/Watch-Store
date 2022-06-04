@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./build/tailwind.css" />
     <title>فروشگاه ساعت</title>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
   <body class="bg-slate-100">
     <!-- App bar -->
@@ -82,7 +86,92 @@
         <!-- products desc -->
         <div class="flex items-center justify-between mb-4 w-full py-1">
           <span class="text-sm text-slate-400">اپل</span>
-          <div class="flex items-center"></div>
+          <div class="flex items-center" x-data="{color:'red'}">
+            <div
+              @click="color = 'red'"
+              :class="color === 'red' ? ' ring-2 ring-red-500' : ''"
+              class="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white curser-pointer bg-red-500 flex items-center justify-center"
+            >
+              <svg
+                x-show="color==='red'"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 md:w-6 md:h-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'blue'"
+              :class="color === 'blue' ? ' ring-2 ring-blue-500' : ''"
+              class="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white curser-pointer -mr-1.5 flex items-center justify-center bg-blue-500"
+            >
+              <svg
+                x-show="color==='blue'"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 md:w-6 md:h-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'pruple'"
+              :class="color === 'pruple' ? ' ring-2 bg-indigo-400' : ''"
+              class="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white curser-pointer -mr-1.5 flex items-center justify-center bg-indigo-400"
+            >
+              <svg
+                x-show="color==='pruple'"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 md:w-6 md:h-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'green'"
+              :class="color === 'green' ? ' ring-2 bg-green-500' : ''"
+              class="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white curser-pointer -mr-1.5 flex items-center justify-center bg-green-500"
+            >
+              <svg
+                x-show="color==='green'"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 md:w-6 md:h-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
         <!-- products title -->
         <div class="md:text-lg text-xs text-slate-800 mb-2 font-bold">
