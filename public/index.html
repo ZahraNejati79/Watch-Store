@@ -7,9 +7,10 @@
     <title>فروشگاه ساعت</title>
   </head>
   <body class="bg-slate-100">
-    <h1>دوره تلویند</h1>
     <!-- App bar -->
-    <div class="flex justify-between items-center bg-red-200 mt-10 px-4 mb-4">
+    <div
+      class="flex md:hidden justify-between items-center bg-red-200 mt-10 px-4 mb-4"
+    >
       <div>digital</div>
       <div class="text-lg font-bold text-slate-800">ساعت هوشمند</div>
       <div class="w-7 h-7 bg-withe shadow-lg flex justify-center items-center">
@@ -27,10 +28,8 @@
         </svg>
       </div>
     </div>
-
     <!-- filter products -->
-
-    <div class="flex items-center justify-start px-4 gap-x-4">
+    <div class="flex md:hidden items-center justify-start px-4 gap-x-4 mb-9">
       <div
         class="bg-white flex items-center justify-start p-2 rounded w-1/2 py-2 pr-4"
       >
@@ -73,6 +72,43 @@
         </div>
         <span class="text-slate-800 text-sm mr-2">فیلتر: برند اپل</span>
       </div>
+    </div>
+    <!-- products section -->
+    <div class="grid gap-4 grid-cols-2 md:col-span-3 lg:grid-cols-4">
+      <div class="bg-white rounded-xl p-2 shadow-md">
+        <div class="mb-3 bg-gray-200 rounded-xl">
+          <img src="/assets/images/apple-watch-7.png.png" alt="apple watch 7" />
+        </div>
+        <!-- products desc -->
+        <div class="flex items-center justify-between mb-4 w-full py-1">
+          <span class="text-sm text-slate-400">اپل</span>
+          <div class="flex items-center"></div>
+        </div>
+        <!-- products title -->
+        <div class="md:text-lg text-xs text-slate-800 mb-2 font-bold">
+          ساعت هوشمند اپل سری 6
+        </div>
+        <div
+          class="md:text-lg text-orange-600 font-medium text-center text-sm mb-3 md:font-bold"
+        >
+          ۱۲,۳۴۰,۰۰۰ تومان
+        </div>
+        <hr class="text-red-300" />
+        <button
+          class="md:text-lg font-bold text-orange-600 w-full py-1 cursor-pointer"
+        >
+          مشاهده و سفارش
+        </button>
+      </div>
+      <div class="bg-white">2</div>
+      <div class="bg-white">3</div>
+      <div class="bg-white">4</div>
+      <div class="bg-white">5</div>
+      <div class="bg-white">6</div>
+      <div class="bg-white">7</div>
+      <div class="bg-white">8</div>
+      <div class="bg-white">9</div>
+      <div class="bg-white">10</div>
     </div>
   </body>
 </html>
