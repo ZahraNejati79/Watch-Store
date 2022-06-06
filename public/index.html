@@ -86,6 +86,7 @@
       </div>
       <div class="hidden md:block col-span-8 lg:col-span-9">
         <div
+          x-data="{sort:1 , activeClass :'text-gray-600 font-bold'}"
           class="bg-white px-4 flex item-center gap-x-4 text-gray-400 rounded-lg"
         >
           <div
@@ -106,10 +107,50 @@
               />
             </svg>
           </div>
-          <button class="py-4">محبوب ترین</button>
-          <button class="py-4">ارزان ترین</button>
-          <button class="py-4">گران ترین</button>
-          <button class="py-4">پرفروش ترین</button>
+          <button
+            class="py-4 relative"
+            @click="sort = 1"
+            :class="sort === 1 ? activeClass : ''"
+          >
+            <span>محبوب ترین</span>
+            <span
+              x-show="sort === 1"
+              class="h-2 w-2 bg-orange-600 rounded-full absolute top-1 left-0"
+            ></span>
+          </button>
+          <button
+            class="py-4 relative"
+            @click="sort = 2"
+            :class="sort === 2 ? activeClass : ''"
+          >
+            <span
+              x-show="sort === 2"
+              class="h-2 w-2 bg-orange-600 rounded-full absolute top-1 left-0"
+            ></span>
+            <span>ارزان ترین</span>
+          </button>
+          <button
+            class="py-4 relative"
+            @click="sort = 3"
+            :class="sort === 3 ? activeClass : ''"
+          >
+            <span
+              x-show="sort === 3"
+              class="h-2 w-2 bg-orange-600 rounded-full absolute top-1 left-0"
+            ></span>
+            <span>گران ترین</span>
+          </button>
+          <button
+            class="py-4 relative"
+            @click="sort = 4"
+            :class="sort === 4 ? activeClass : ''"
+          >
+            <span
+              x-show="sort === 4"
+              class="h-2 w-2 bg-orange-600 rounded-full absolute top-1 left-0"
+            ></span>
+            <span>پرفروش ترین</span>
+          </button>
         </div>
       </div>
       <div class="col-span-12 md:col-span-8 lg:col-span-9">
