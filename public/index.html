@@ -167,7 +167,10 @@
           <div class="bg-white text-xl">
             <div class="text-orange-400 font-bold mb-5">فیلتر</div>
             <!-- Acc No 1 -->
-            <div>
+            <div
+              x-data="{isOpenBrand:true}"
+              @click="isOpenBrand = !isOpenBrand"
+            >
               <!-- Acc 1 Header -->
               <div
                 class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg w-full cursor-pointer"
@@ -209,7 +212,7 @@
                     <span class="mr-2">برند محصول</span>
                   </div>
                 </div>
-                <div>
+                <div :class="isOpenBrand ? 'rotate-180' :''">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-4 w-4"
@@ -227,26 +230,41 @@
                 </div>
               </div>
               <!-- Acc 1 Content -->
-              <div class="flex flex-col">
+              <div x-show="isOpenBrand" class="flex flex-col">
                 <label
                   for="apple"
                   class="flex items-center py-1 cursor-pointer"
                 >
-                  <input type="checkbox" name="apple" id="apple" />
+                  <input
+                    type="checkbox"
+                    class="form-checkbox rounded"
+                    name="apple"
+                    id="apple"
+                  />
                   <span class="px-2">اپل</span>
                 </label>
                 <label
                   for="xiaomi"
                   class="flex items-center py-1 cursor-pointer"
                 >
-                  <input type="checkbox" name="xiaomi" id="xiaomi" />
+                  <input
+                    type="checkbox"
+                    class="form-checkbox rounded"
+                    name="xiaomi"
+                    id="xiaomi"
+                  />
                   <span class="px-2">شیائومی</span>
                 </label>
                 <label
-                  for="samsun"
+                  for="samsung"
                   class="flex items-center py-1 cursor-pointer"
                 >
-                  <input type="checkbox" name="samsung" id="samsung" />
+                  <input
+                    type="checkbox"
+                    class="form-checkbox rounded"
+                    name="samsung"
+                    id="samsung"
+                  />
                   <span class="px-2">سامسونگ</span>
                 </label>
               </div>
