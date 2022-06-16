@@ -282,7 +282,7 @@
                   <span class="w-5 h-5 relative rounded-full bg-gray-200">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="w-4 h-5 absolute top-1.5 right-1"
+                      class="w-4 h-5 absolute top-1.5 right-1 stroke-slate-600"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -350,8 +350,8 @@
             </div>
             <!-- Acc No 3 -->
             <div
-              x-data="isOpenFilterPrice"
-              @click="{isOpenFilterPrice = !isOpenFilterPrice}"
+              x-data="{isOpenFilterPrice :true}"
+              @click="isOpenFilterPrice = !isOpenFilterPrice"
             >
               <!-- Acc 3 Header -->
               <div
@@ -361,7 +361,7 @@
                   <span class="relative rounded-full h-5 w-5 bg-gray-200">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="h-4 w-5 absolute top-1.5 right-1"
+                      class="h-4 w-5 absolute top-1.5 right-1 stroke-slate-600"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -377,7 +377,7 @@
                   <span class="px-2">محدوده قیمت</span>
                 </div>
 
-                <div :class="isOpenFilterPrice ? 'rotete-180':''">
+                <div :class="isOpenFilterPrice ? 'rotate-180' : ''  ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-4 w-4"
@@ -395,15 +395,22 @@
                 </div>
               </div>
               <!-- Acc 3 Content -->
-              <div x-show="isOpenFilterPrice ">
-                <label for="customRange1" class="form-label"
-                  >Example range</label
-                >
-                <input
-                  type="range"
-                  class="form-range appearance-none w-full h-6 p-0 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none"
-                  id="customRange1"
-                />
+              <div x-show="isOpenFilterPrice">
+                <div x-data="{ price: 1 }" class="w-full flex flex-col gap-y-1">
+                  <label
+                    for="price"
+                    class="font-normal text-gray-700"
+                    x-text="`قیمت:` + price +`میلیون تومان `"
+                  ></label>
+                  <input
+                    type="range"
+                    min="1"
+                    name="price"
+                    max="100"
+                    x-model="price"
+                    class="w-full h-2 bg-orange-100 appearance-none"
+                  />
+                </div>
               </div>
             </div>
           </div>
