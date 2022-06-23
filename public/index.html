@@ -164,7 +164,7 @@
     >
       <!-- sideBar -->
       <div
-        class="hidden md:block col-span-4 lg:col-span-3 xl:col-span-2 row-span-2 p-2"
+        class="hidden md:block col-span-4 lg:col-span-3 row-span-2 p-2 max-h-[calc(100vh_-_140px)] overflow-auto sticky top-28"
       >
         <div class="bg-white p-5 text-xl">
           <div class="text-orange-400 font-bold mb-5">دسته بندی</div>
@@ -500,13 +500,13 @@
         </div>
       </div>
       <!-- sort section -->
-      <div class="hidden md:block col-span-8 lg:col-span-9 xl:col-span-10 mt-1">
+      <div class="hidden md:block col-span-8 lg:col-span-9 mt-1">
         <div
           x-data="{sort:1 , activeClass :'text-gray-600 font-bold'}"
           class="bg-white px-4 flex item-center gap-x-4 text-gray-400 rounded-lg"
         >
           <div
-            class="bg-orange-100 p-2 rounded-md flex justify-center items-center"
+            class="p-2 rounded-md flex justify-center items-center cursor-pointer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -570,7 +570,7 @@
         </div>
       </div>
       <!-- products -->
-      <div class="col-span-12 md:col-span-8 lg:col-span-9 xl:col-span-10">
+      <div class="col-span-12 md:col-span-8 lg:col-span-9">
         <div
           x-data="{ products: [
         {id:1 , title:'ساعت هوشمند اپل سری 2' , price: '۱۲,۳۴۰,۰۰۰ تومان'},
