@@ -78,7 +78,7 @@
       </div>
     </div>
     <!-- navBar desktop -->
-    <nav class="hidden md:block bg-white p-4 shadow-lg sticky top-0 mb-4">
+    <nav class="hidden md:block bg-white p-4 shadow-lg sticky top-0 mb-4 z-10">
       <div
         class="container mx-auto max-w-screen-2xl flex items-center justify-between"
       >
@@ -706,6 +706,75 @@
         </div>
       </div>
     </div>
-    <!-- products section -->
+
+    <!-- bottom navigation -->
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white w-full rounded-rt-md rounded-tr-md flex items-center px-4 py-2"
+    >
+      <nav class="w-full">
+        <ul class="flex items-center justify-between gap-x-3 w-full">
+          <li class="w-full">
+            <a class="flex items-center justify-center w-full py-2" href="#"
+              ><svg
+                width="32"
+                height="32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.7 9 19 3.8a6.5 6.5 0 0 0-7.3.2L5 9A6.9 6.9 0 0 0 2.7 14v9.2c0 3.4 2.7 6.1 6.1 6.1h14.4c3.4 0 6.1-2.7 6.1-6.1v-9c0-1.9-1.1-4-2.6-5.1ZM17 24c0 .5-.5 1-1 1a1 1 0 0 1-1-1v-4c0-.5.5-1 1-1s1 .5 1 1v4Z"
+                  fill="#222F5D"
+                /></svg
+            ></a>
+          </li>
+          <li class="w-full">
+            <a class="flex items-center justify-center w-full py-2" href="#">
+              <svg
+                width="34"
+                height="34"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.3 2.8H7.6c-3.1 0-4.8 1.7-4.8 4.8v2.6c0 3.1 1.7 4.8 4.8 4.8h2.6c3.1 0 4.8-1.7 4.8-4.8V7.6c0-3.1-1.7-4.8-4.7-4.8ZM26.4 2.8h-2.6c-3.1 0-4.8 1.7-4.8 4.8v2.6c0 3.1 1.7 4.8 4.8 4.8h2.6c3.1 0 4.8-1.7 4.8-4.8V7.6c0-3.1-1.7-4.8-4.8-4.8ZM26.4 19h-2.6c-3.1 0-4.8 1.7-4.8 4.7v2.7c0 3.1 1.7 4.8 4.8 4.8h2.6c3.1 0 4.8-1.7 4.8-4.8v-2.7c0-3-1.7-4.7-4.8-4.7ZM10.3 19H7.6c-3.1 0-4.8 1.7-4.8 4.7v2.7c0 3.1 1.7 4.8 4.8 4.8h2.6c3.1 0 4.8-1.7 4.8-4.8v-2.6c0-3.1-1.7-4.8-4.7-4.8Z"
+                  fill="#222F5D"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="w-full">
+            <a class="flex items-center justify-center w-full py-2" href="#">
+              <svg
+                width="34"
+                height="34"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M28.3 12.7c-1-1-2.4-1.7-4.4-1.9v-1a6.9 6.9 0 0 0-7.6-7 7.3 7.3 0 0 0-6.2 7.2v.8c-2 .2-3.4.8-4.4 1.9-1.4 1.5-1.3 3.6-1.2 5l1 7.9c.3 2.7 1.5 5.6 7.5 5.6h8c6 0 7.2-2.9 7.5-5.6l1-8c.1-1.3.1-3.4-1.2-5ZM16.5 4.8a5 5 0 0 1 5.4 5v1h-9.8V10c0-2.5 2-5 4.4-5.2ZM12 18.6c-.8 0-1.4-.6-1.4-1.4a1.4 1.4 0 0 1 2.8 0c0 .8-.6 1.4-1.4 1.4Zm10 0c-.8 0-1.5-.6-1.5-1.4a1.4 1.4 0 0 1 2.9 0c0 .8-.7 1.4-1.5 1.4Z"
+                  fill="#222F5D"
+                  fill-opacity=".4"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="w-full">
+            <a class="flex items-center justify-center w-full py-2" href="#">
+              <svg
+                width="29"
+                height="25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.8.3a7.7 7.7 0 0 0-6.1 3.1A7.7 7.7 0 0 0 .8 8.1c0 1.6.3 3.1.7 4.5 2.2 7 9 11.1 12.3 12.2.5.2 1.3.2 1.7 0 3.4-1 10.1-5.2 12.3-12.2.5-1.4.7-2.9.7-4.5 0-4.3-3.4-7.8-7.7-7.8Z"
+                  fill="#222F5D"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </body>
 </html>
